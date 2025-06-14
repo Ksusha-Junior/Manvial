@@ -1,0 +1,15 @@
+pip install Django установка
+django-admin startproject api .    Создание проекта api
+python .\manage.py startapp main создали приложение имя main
+pip install python-dotenv библиотека для создания файла .env
+pip install django-environ  библиотека для создания файла .env  (лучше)
+pip install djangorestframework   установка DRF (указать в настройках)
+python .\manage.py makemigrations
+python .\manage.py migrate
+python .\manage.py createsuperuser     создание суперюзера
+
+
+admin     Ok21041976
+
+
+pip install python-telegram-bot aiohttp   пакет для бота
