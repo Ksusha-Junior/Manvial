@@ -14,7 +14,7 @@ class Service(models.Model):
 
 class Discount(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name='услуга')
-    min_objects = models.DecimalField(max_digits=4, decimal_places=3, verbose_name='минимальное количество объектов')
+    min_objects = models.FloatField(verbose_name='минимальное количество объектов')
     discount_percent = models.IntegerField(verbose_name='процент скидки')
 
     def __str__(self):

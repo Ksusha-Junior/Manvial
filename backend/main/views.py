@@ -8,7 +8,9 @@ from .models import Service, Price
 class CalculatePriceView(APIView):
     def get(self, request):
         service_id = request.query_params.get('service_id')
-        quantity = float(request.query_params.get('quantity', 1))
+        quantity_str = request.query_params.get('quantity', 1)
+        quantity_str = quantity_str.replace(',', '.')
+        quantity = float(quantity_str)
 
         try:
             price = Price.objects.get(id=service_id)

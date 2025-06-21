@@ -3,9 +3,10 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters
 import aiohttp
 import json
+from dotenv import load_dotenv
 
-
-TOKEN = "7679249425:AAGWh21-Xm8ssroJHFXWY9reJsIAoPvK_c8"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 API_URL = "http://127.0.0.1:8000"
 
 
@@ -16,7 +17,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "Добро пожаловать! Я помогу вам рассчитать стоимость услуг. Внимание! Я рассчитаю ориентировочную стоимость ремонта. ",
+        "Добро пожаловать! \n"
+        " Я помогу  рассчитать стоимость услуг. \n"
+        " Внимание! Я рассчитаю ориентировочную стоимость ремонта.\n"
+        " Обращаю внимание! На услуги по регулировке окон ПВХ скидка от заказа 2 створки и более!",
         reply_markup=reply_markup
     )
 
@@ -51,23 +55,42 @@ async def select_service(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Сохраняем выбранный service_id в контексте пользователя
     context.user_data['selected_service'] = service_id
 
-    await query.edit_message_text(
-        "Введите количество:\n"
-    "Створок: число\n"
-    "Резиновый уплотнитель: м.п.\n"
-    "Стеклопакеты: м2"
-    )
+    if service_id == ('1'):
+        await query.edit_message_text(
+            "Введите количество створок: число")
+    elif service_id == ( '2' ):
+        await query.edit_message_text(
+            "Введите количество створок: число")
+    elif service_id == ( '3' ):
+        await query.edit_message_text(
+            "Введите количество уплотнителя: метр погонный:")
+    elif service_id == ( '4' ):
+        await query.edit_message_text(
+            "Введите количество створок: число")
+    elif service_id == ( '7' ):
+        await query.edit_message_text(
+            "Введите количество дверей: число")
+    elif service_id == ( '8' ):
+        await query.edit_message_text(
+            "Введите количество дверей: число")
+    else:
+        await query.edit_message_text(
+            "Введите количество стеклопакета: метр квадратный:")
+
     # Устанавливаем следующий обработчик для получения количества
     context.user_data['waiting_for_quantity'] = True
 
 
 async def handle_quantity(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data['waiting_for_quantity'] = True
     """Обработчик ввода количества объектов"""
     if not context.user_data.get('waiting_for_quantity'):
         return
 
     try:
-        quantity = float(update.message.text)
+        quantity_text = update.message.text
+        quantity_text = quantity_text.replace(',', '.')
+        quantity = float(quantity_text)
         service_id = context.user_data['selected_service']
 
         # Получаем расчет цены
@@ -83,7 +106,7 @@ async def handle_quantity(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"Услуга: {result['service']}\n"
             f"Количество: {result['quantity']}\n"
             f"Базовая цена: {result['base_price']} руб.\n"
-            f"Итоговая цена: {result['total_price']} руб."
+            f"Итоговая сумма: {result['total_price']} руб."
         )
 
         # Сбрасываем флаг ожидания количества
