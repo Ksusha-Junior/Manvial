@@ -1,0 +1,107 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;/*расположение элементов: правый, левый по краям, остальные равномерно*/
+    padding: 5px 10px 5px 10px;
+    background-color: #808080;
+    margin: 0;
+}
+
+
+
+.header-main {
+    flex: 0.9;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header-title {
+    margin: 0;
+    font-size: 30px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /*тень для текста*/
+}
+
+.header-nav {
+    margin-top: 10px;
+}
+
+.header-nav ul{
+    list-style: none;  /*отсутствие маркеров*/
+    display: flex;   /*Элементы шапки размещаются в ряд*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li{
+    font-size: 20px;
+    padding: 5px 60px 5px 3px;
+    transition: all 0.3s ease;
+}
+.header-nav li:hover{
+    font-size: 25px;
+}
+
+.header-nav a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет ссылок */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.work-time {
+    align-items: center;
+    flex-direction: column;
+}
+
+.work-time h2{
+    color: black;
+    font-size: 16px;
+    margin-top: 9px;
+}
+
+.work-time h1{
+    color: black;
+    font-size: 16px;
+    margin-top: 9px;
+}
+
+.header-user {
+    flex: 0.09;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /*расстояние между элементами в контейнере*/
+}
+
+.header-user span{
+    color: black;
+}
+
+.header-user button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-user button:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень для блока */
+}
+
+.header-user a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.header-user a:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень для блока */
+}

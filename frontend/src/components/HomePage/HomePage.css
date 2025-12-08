@@ -1,0 +1,18 @@
+/*.home-page {
+    color: white; /* Белый цвет текста для контраста с темным фоном */
+   /* text-align: center;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Тень для эффекта глубины */
+   /* border-radius: 10px;
+    position: absolute; /* Позволяет нам использовать top и left для центрирования */
+   /* top: 55%; /* Смещение от верхней грани */
+   /* left: 50%; /* Смещение от левой грани */
+    /*transform: translate(-50%, -50%); /* Смещение для точного центрирования */
+/*}*/
+
+/*.home-page p{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #DAA520;
+}*/

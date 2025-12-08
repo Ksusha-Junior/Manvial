@@ -18,9 +18,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
         "Добро пожаловать! \n"
-        " Я помогу  рассчитать стоимость услуг. \n"
-        " Внимание! Я рассчитаю ориентировочную стоимость ремонта.\n"
-        " Обращаю внимание! На услуги по регулировке окон ПВХ скидка от заказа 2 створки и более!",
+        "Я помогу  рассчитать стоимость услуг. \n"
+        "Внимание! Я рассчитаю ориентировочную стоимость ремонта.\n"
+        "Обращаю внимание! На услуги по регулировке окон ПВХ скидка от заказа 2 створки и более!",
         reply_markup=reply_markup
     )
 
@@ -60,19 +60,19 @@ async def select_service(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Введите количество створок: число")
     elif service_id == ( '2' ):
         await query.edit_message_text(
-            "Введите количество створок: число")
-    elif service_id == ( '3' ):
+            "Введите количество дверей: число")
+    elif service_id == ( '5' ):
         await query.edit_message_text(
             "Введите количество уплотнителя: метр погонный:")
-    elif service_id == ( '4' ):
+    elif service_id == ( '3' ):
         await query.edit_message_text(
             "Введите количество створок: число")
-    elif service_id == ( '7' ):
+    elif service_id == ( '4' ):
         await query.edit_message_text(
             "Введите количество дверей: число")
-    elif service_id == ( '8' ):
+    elif service_id == ( '6' ):
         await query.edit_message_text(
-            "Введите количество дверей: число")
+            "Введите количество створок: число")
     else:
         await query.edit_message_text(
             "Введите количество стеклопакета: метр квадратный:")

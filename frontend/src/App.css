@@ -1,0 +1,25 @@
+
+
+.app {
+  background-color: #faf2f2;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+
+
+}
+.content {
+    color: #910d0d;
+    text-align: center;
+}
+
+.routes-content {
+    display: flex;
+}

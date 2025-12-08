@@ -6,10 +6,35 @@ pip install django-environ  библиотека для создания фай�
 pip install djangorestframework   установка DRF (указать в настройках)
 python .\manage.py makemigrations
 python .\manage.py migrate
+python manage.py runserver
 python .\manage.py createsuperuser     создание суперюзера
-
+- pip freeze > requirements.txt  для хранения всех загрузок
+- python -m pip install pillow   для работы с image
+- прописать в settings путь к MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+- в главных урлах (под settings) указать путь urlpatterns += static(settings.MEDIA_URL,
+document_root=settings.MEDIA_ROOT)
+- pip install django-cors-headers для связи react $django(в settings прописать "corsheaders",
+"corsheaders.middleware.CorsMiddleware",
+"django.middleware.common.CommonMiddleware",)
 
 admin     Ok21041976
 
 
 pip install python-telegram-bot aiohttp   пакет для бота
+
+- REACT
+- django-admin startapp frontend  - создаем приложение под фронтенд
+- mkdir -p ./frontend/src/components  папка для компонентов
+-  mkdir -p ./frontend/{static,templates}/frontend -- и статики
+
+New-Item -ItemType Directory -Path ./frontend/static, ./frontend/templates, ./frontend/frontend
+
+-  Node.js  -в браузере скачиаем Нод под винду скачивается один раз на комп и потом используется в проектах
+- зайти в frontend - npm start  стартуем
+- pip install aiohttp - библиотека для асинхронных запросов
+- npm install axios - установка моуля axios
+-npm install react-router-dom установить роутеры
+- npm audit fix - исправить уязвимости
+-npm install react-slick установка библиотеки для слайдера
+- npm install slick-carousel библиотека для карусели

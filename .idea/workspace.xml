@@ -4,10 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bbc2206-118e-4c99-8bcd-9c79d873b814" name="Changes" comment="не работает на дробных числах">
+    <list default="true" id="5bbc2206-118e-4c99-8bcd-9c79d873b814" name="Changes" comment="готово">
+      <change afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/general/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/general/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/general/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/general/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/migrations/0002_discount_service_alter_service_service_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/migrations/0003_alter_discount_min_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/migrations/0004_alter_discount_min_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main_bot/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/HomePage/HomePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/HomePage/HomePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/post/Post.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/post/Post.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/post/PostList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/price/Price.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/price/PriceList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_bot/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main_bot/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main_bot/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main_bot/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main_bot/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_bot/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_bot/bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +58,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/src/components/post/Post.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -32,7 +79,8 @@
     &quot;Python.bot.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/PycharmProjects/Manvial/frontend/src/components&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;ChangesTree.GroupingKeys&quot;: [
@@ -41,6 +89,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\Manvial\frontend\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\PycharmProjects\Manvial\backend" />
     </key>
@@ -120,11 +171,20 @@
       <option name="project" value="LOCAL" />
       <updated>1749926637692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="готово">
+      <option name="closed" value="true" />
+      <created>1750510295543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750510295543</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="не работает на дробных числах" />
-    <option name="LAST_COMMIT_MESSAGE" value="не работает на дробных числах" />
+    <MESSAGE value="готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="готово" />
   </component>
 </project>
