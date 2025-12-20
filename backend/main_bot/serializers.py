@@ -9,11 +9,11 @@ class ServiceSerializer(serializers.ModelSerializer):
 
 
 class PriceSerializer(serializers.ModelSerializer):
-    service = ServiceSerializer(read_only=True)
+    service_name = serializers.CharField(source='service.service', read_only=True)
 
     class Meta:
         model = Price
-        fields = ['id', 'service', 'base_price']
+        fields = ['id', 'service', 'base_price', 'service_name']
 
 class DiscountSerializer(serializers.ModelSerializer):
     class Meta:

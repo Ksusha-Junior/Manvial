@@ -1,15 +1,13 @@
 import React from 'react';
 import './HomePage.css';
+import PostList from '../post/PostList';
+import PersonalInfo from '../PersonalInfo/PersonalInfo';
 
 
 function HomePage() {
     return (
         <div className="home-page">
-            <nav className="home-nav">
-                <ul>
-                    <li><link to="/posts" ></link></li>
-                </ul>
-            </nav>
+            <PostList/>
         </div>
     );
 }

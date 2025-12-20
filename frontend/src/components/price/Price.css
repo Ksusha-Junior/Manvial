@@ -1,0 +1,39 @@
+.PriceList-main {
+    /*background-color: black;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* чтобы занять всю ширину */
+}
+
+.PriceList-title {
+    text-align: center;
+    margin: 5px 10px 30px 10px;
+    font-weight: bold;         /* жирный */
+}
+
+.PriceList-columns {
+    /*background-color: black;*/
+    display: flex;
+    gap: 50px;
+    width: 100%;  /*ширина во весь родительский контейнер*/
+    font-size: 1.2em;
+}
+
+.column.services-column {
+    flex: 3;
+    min-width: 0;
+}
+
+.column.prices-column {
+    flex: 0.5;
+    min-width: 0;
+}
+.service-item {
+    padding: 5px 0;
+    white-space: nowrap; /* чтобы не переносился текст */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.price-item {
+    padding: 5px 0;
+}

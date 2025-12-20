@@ -1,25 +1,74 @@
-
+/*html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}*/
 
 .app {
   background-color: #faf2f2;
   background-repeat: no-repeat;
-  background-position: center;
+  /*background-position: center;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
 }
+
+.marquee-container {
+  /* Можно задать ширину, равную ширине средней колонки */
+  width: 600px; /* или другую как у вашей средней колонки */
+  margin: 10px auto; /* Центрируем по горизонтали */
+  overflow: hidden; /* Для эффекта бегущей строки */
+}
+
 .main-content {
     display: flex;
-    flex-direction: column;
-
-
+    flex: 1; /* Заставляет основной контент занимать всю доступную высоту */
+    flex-direction: row;
+    width: 100%;
+    gap: 5px; /* расстояние между колонками */
+    /*padding: 10px;*/
 }
-.content {
-    color: #910d0d;
-    text-align: center;
+.left-column {
+  flex: 2; /* или 20% - можно оставить так, чтобы было адаптивно */
+  min-width: 200px; /* минималка */
+  display: flex;
+  flex-direction: column;
 }
 
-.routes-content {
-    display: flex;
+.center-column {
+  flex: 5; /* или 50% */
+  min-width: 500px; /* для надежности */
+}
+
+.right-column {
+  flex: 3; /* или 30% */
+  min-width: 200px;
+}
+.scrolling-text {
+  width: 100%; /* Задает ширину блока равной ширине контейнера */
+  overflow: hidden; /* Обрезает содержимое, выходящее за границы блока (для эффекта бегущей строки) */
+  white-space: nowrap; /* Запрещает перенос строки, чтобы текст шёл в одну линию */
+  background-color: #ffd; /* Цвет фона блока (желтый) */
+  color: #520210;/*d63915; /* Цвет текста */
+  font-weight: bold;         /* жирный */
+  font-size: 1.2em;
+}
+
+.scrolling-text::after {
+  content: attr(data-text); /* Использует атрибут data-text для вставки текста, если потребуется, тут можно убрать */
+}
+
+/* Анимация текста для бегущей строки */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%); /* Начинается справа за пределами видимости */
+  }
+  100% {
+    transform: translateX(-100%); /* Проходит полностью слева за пределы */
+  }
+}
+
+.scrolling-text {
+  display: inline-block; /* Устанавливает блочный, чтобы применять анимацию */
+  animation: scrollLeft 17s linear infinite; /* Время прохождения и бесконечное повторение */
 }

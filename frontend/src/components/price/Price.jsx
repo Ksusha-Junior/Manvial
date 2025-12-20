@@ -3,21 +3,17 @@ import PropTypes from 'prop-types';
 
 
 
-const Price = (props) => {
-
-    return (
-        <div className='price'  style={{ cursor: 'pointer' }}>
-
-            <div> {props.price.service} - {props.price.price}</div>
-        </div>
-    );
+const Price = ({ service_name, base_price }) => {
+  return (
+    <div className="price-item">
+      <strong>{service_name}</strong>: {base_price} руб.
+    </div>
+  );
 };
 
 Price.propTypes = {
-    price: PropTypes.shape({
-        service: PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
-    }).isRequired,
+  service_name: PropTypes.string.isRequired,
+  base_price: PropTypes.number.isRequired,
 };
 
 export default Price;

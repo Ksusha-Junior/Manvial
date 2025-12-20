@@ -5,9 +5,9 @@ import './Post.css';
 const Post = ({post}) => {
     return(
         <div className='post'>
-            <strong>{post.title}</strong>
-            <img src={post.image}  className="post-image" />/>
-            <strong>{post.text}</strong>
+            <h2 className='post-title'>{post.title}</h2>
+            <img src={post.image}  className="post-image" alt='Post Image' />
+            <p className='post-text'>{post.text}</p>
         </div>
     );
 };
