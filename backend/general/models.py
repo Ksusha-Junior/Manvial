@@ -23,3 +23,62 @@ class Personal_info (models.Model):
         verbose_name = 'Обо мне'
         verbose_name_plural = 'Обо мне'
 
+
+class Comment(models.Model):
+    date = models.DateField(auto_now=True, verbose_name='Дата')
+    name = models.CharField(max_length=30, blank=True, null=True, default='user', verbose_name='Имя')
+    text = models.TextField(max_length=200, verbose_name='текст')
+
+    def __str__(self):
+        return f'{self.id}, {self.date}, {self.name}, {self.text}'
+
+    class Meta:
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
+        ordering = ['date']
+
+class Photo(models.Model):
+    comment = models.ForeignKey(Comment, related_name='photos', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='comments/photos/')
+
+    def __str__(self):
+        return f'{self.comment}, {self.image}'
+
+    class Meta:
+        verbose_name = 'Фото'
+        verbose_name_plural = 'Фото'
+        ordering = ['comment']
+
+class Video(models.Model):
+    comment = models.ForeignKey(Comment, related_name='videos', on_delete=models.CASCADE)
+    video = models.FileField(upload_to='comments/videos/')
+
+    def __str__(self):
+        return f'{self.comment}, {self.video}'
+
+    class Meta:
+        verbose_name = 'Видео'
+        verbose_name_plural = 'Видео'
+        ordering = ['comment']
+
+class Organizations(models.Model):
+    text = models.TextField(verbose_name='текст')
+    image = models.ImageField(verbose_name='Картинка', upload_to='images', null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.text}, {self.image}'
+
+    class Meta:
+        verbose_name = 'Юр.лица'
+        verbose_name_plural = 'Юр.лица'
+
+
+class People(models.Model):
+    text = models.TextField(verbose_name='текст')
+
+    def __str__(self):
+        return f'{self.text}'
+
+    class Meta:
+        verbose_name = 'Физ.лица'
+        verbose_name_plural = 'Физ.лица'

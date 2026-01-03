@@ -14,7 +14,8 @@
 .post-text {
     text-align: justify; /* Выравнивание текста по обоим краям */
      margin-top: 5px;
-     font-weight: bold;         /* жирный */
+     /*font-weight: bold;         /* жирный */
+    font-size: 1.2em;
 }
 
 .post-title {

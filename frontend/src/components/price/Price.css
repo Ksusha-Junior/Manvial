@@ -1,14 +1,20 @@
 .PriceList-main {
-    /*background-color: black;*/
+    background-image: url('images/окно.jpg');
+    /*background-size: cover; /* или contain */
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     width: 100%; /* чтобы занять всю ширину */
+    height: 100%;
+    background-size: 120%;
 }
 
 .PriceList-title {
     text-align: center;
     margin: 5px 10px 30px 10px;
     font-weight: bold;         /* жирный */
+    font-size: 1.7em;
 }
 
 .PriceList-columns {
@@ -16,7 +22,8 @@
     display: flex;
     gap: 50px;
     width: 100%;  /*ширина во весь родительский контейнер*/
-    font-size: 1.2em;
+    font-size: 1.5em;
+    margin-left: 15px;
 }
 
 .column.services-column {
@@ -29,11 +36,18 @@
     min-width: 0;
 }
 .service-item {
+    cursor: grab;
     padding: 5px 0;
     white-space: nowrap; /* чтобы не переносился текст */
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.service-item:hover {
+    white-space: normal; /* показывать полный текст при наведении */
+    background-color: rgba(0, 0, 0, 0.05); /* по желанию — легкая подсветка */
+    z-index: 1; /* чтобы не обрезался, можно добавить если есть позиционирование */
+}
+
 .price-item {
     padding: 5px 0;
 }

@@ -6,8 +6,6 @@ import './Price.css';
 
 const API_URL_PRICE = 'http://127.0.0.1:8000/price/';
 
-{/* * */}
-
 function PriceList() {
   const [prices, setPrices] = useState([]);
 

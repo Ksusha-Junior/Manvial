@@ -3,11 +3,9 @@
     display: flex;
     flex-direction: column;
     margin-top: 5px; /* Опускание текста вниз от верхнего края*/
-
     padding: 20px; /* Отступы */
     gap: 10px;  /*отступ между элементами внутри контейнера*/
     justify-content: center;
-
     width: 100%; /* растягиваем по всей ширине */
     width: 200px;  /* Ограничение ширины контейнера */
     height: 300px;  /* Ограничение высоты контейнера */
@@ -16,7 +14,7 @@
 }
 
 .personalinfo-image {
-    width: 100px; /* Ширина изображения */
+    width: 120px; /* Ширина изображения */
     height: 200px; /*  высота */
     border-radius: 15px;
     object-fit: cover;
@@ -25,6 +23,6 @@
 .personalinfo-text {
     width: 100%; /* растягиваем по всей ширине */
     font-weight: bold;         /* жирный */
-    font-size: 13px;
+    font-size: 14px;
     text-align: justify; /* Выравнивание текста по обоим краям */
 }

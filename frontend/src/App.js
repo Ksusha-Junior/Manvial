@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import PriceList from './components/price/PriceList';
+import Message from './components/Message/Message';
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
+import InstagramLink from './components/InstagramLink/InstagramLink';
+import TelegramLink from './components/TelegramLink/TelegramLink';
+import ViberLink from './components/ViberLink/ViberLink';
+import CommentForm from './components/Comments/CommentForm';
+import CommentsList from './components/Comments/CommentsList';
+import CommentButton from './components/Comments/CommentButton';
 import './App.css';
 import Footer from './components/Footer/Footer';
 
@@ -21,14 +28,21 @@ function App() {
                     <div className="left-column">
                     {/*<h2 className='header-text'>Качественно! Недорого! В удобное для Вас время!</h2>*/}
                         <PersonalInfo />
+
                     </div>
                     <div className="center-column">
                         <Routes>
                             <Route  path="/" element={<HomePage />} />
                             <Route path="/prices" element={<PriceList />} />
+                            <Route path="/message" element={<Message />} />
+                            <Route path="/comments" element={<CommentsList />} />
                         </Routes>
                     </div>
                     <div className="right-column">
+                        <InstagramLink />
+                        <TelegramLink />
+                        <ViberLink />
+                        <CommentButton />
                     </div>
                 </main>
                 <Footer />

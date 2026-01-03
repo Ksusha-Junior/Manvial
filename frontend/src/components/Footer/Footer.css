@@ -1,7 +1,7 @@
 .footer {
     background-color: #FFF8DC; /* Цвет фона футера */
     color: #293133; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
+    text-align: left; /* Центрирование текста */
     margin-top: auto;
     padding: 5px; /* Отступы внутри футера */
     flex-shrink: 0; /* Предотвращает сжатие футера */
@@ -9,7 +9,7 @@
     display: flex; /* Используем flexbox для выравнивания содержимого */
     align-items: center; /* Вертикальное центрирование содержимого */
     justify-content: center; /* Горизонтальное центрирование содержимого */
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .telegram-link {

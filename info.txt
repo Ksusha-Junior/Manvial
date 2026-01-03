@@ -38,3 +38,4 @@ New-Item -ItemType Directory -Path ./frontend/static, ./frontend/templates, ./fr
 - npm audit fix - исправить уязвимости
 -npm install react-slick установка библиотеки для слайдера
 - npm install slick-carousel библиотека для карусели
+- npm install react-icons библиотека для значков популярных соц.сетей

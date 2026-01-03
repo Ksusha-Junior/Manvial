@@ -25,7 +25,7 @@
     flex: 1; /* Заставляет основной контент занимать всю доступную высоту */
     flex-direction: row;
     width: 100%;
-    gap: 5px; /* расстояние между колонками */
+    gap: 10px; /* расстояние между колонками */
     /*padding: 10px;*/
 }
 .left-column {
@@ -36,20 +36,27 @@
 }
 
 .center-column {
-  flex: 5; /* или 50% */
+  flex: 6; /* или 60% */
   min-width: 500px; /* для надежности */
+
 }
 
 .right-column {
-  flex: 3; /* или 30% */
+    display: flex;
+    flex-direction: column;
+  flex: 2; /* или 20% */
+  gap: 15px;
   min-width: 200px;
+  padding-top: 10px;
+  padding-left: 10px;
+   margin-right: 10px;
 }
 .scrolling-text {
   width: 100%; /* Задает ширину блока равной ширине контейнера */
   overflow: hidden; /* Обрезает содержимое, выходящее за границы блока (для эффекта бегущей строки) */
   white-space: nowrap; /* Запрещает перенос строки, чтобы текст шёл в одну линию */
   background-color: #ffd; /* Цвет фона блока (желтый) */
-  color: #520210;/*d63915; /* Цвет текста */
+  color: #9e0e0e;  /*#520210;/*d63915; /* Цвет текста */
   font-weight: bold;         /* жирный */
   font-size: 1.2em;
 }
