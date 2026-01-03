@@ -4,6 +4,7 @@ from .models import Post
 from .models import Comment
 from .models import Photo, Video
 from .models import Organizations, People
+from .models import OrganizationPhoto
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
@@ -61,12 +62,21 @@ class CommentSerializer(serializers.ModelSerializer):
 
         return comment
 
+
+class OrganizationPhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrganizationPhoto
+        fields = ['image']
+
+
 class OrganizationsSerializer(serializers.ModelSerializer):
+    photos = OrganizationPhotoSerializer(many=True, read_only=True)
+
     class Meta:
         model = Organizations
-        fields = ['text', 'image']
+        fields = ['text', 'photos']
 class PeopleSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Organizations
-        fields = ['text']
+        model = People
+        fields = ['text', 'image']
 

@@ -1,0 +1,21 @@
+.people-button {
+    border: 2px solid #ccc;
+    border-Radius: 8px;
+    box-Shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    text-Decoration: none;
+    color: inherit;
+    width: 100%;
+    padding: 5px;
+    background-color: #bddbd2;
+    cursor: pointer;
+}
+.people-button:hover {
+    background-color: #5c7a71; /* Цвет фона при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    color: white;
+}
+.people-modal-text {
+    white-space: pre-wrap; /* сохраняет переносы строк */
+    color: #333;
+}
+

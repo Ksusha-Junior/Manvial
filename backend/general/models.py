@@ -63,21 +63,33 @@ class Video(models.Model):
 
 class Organizations(models.Model):
     text = models.TextField(verbose_name='текст')
-    image = models.ImageField(verbose_name='Картинка', upload_to='images', null=True, blank=True)
+
 
     def __str__(self):
-        return f'{self.text}, {self.image}'
+        return f'{self.text}'
 
     class Meta:
         verbose_name = 'Юр.лица'
         verbose_name_plural = 'Юр.лица'
 
+class OrganizationPhoto(models.Model):
+    organization = models.ForeignKey(Organizations, related_name='photos', on_delete=models.CASCADE)
+    image = models.ImageField(verbose_name='Фото', upload_to='organization_photos')
+
+    def __str__(self):
+        return f'{self.organization}, {self.image}'
+
+    class Meta:
+        verbose_name = 'Юр.лица фото'
+        verbose_name_plural = 'Юр.лица фото'
+
 
 class People(models.Model):
     text = models.TextField(verbose_name='текст')
+    image = models.ImageField(verbose_name='Картинка', upload_to='images', null=True, blank=True)
 
     def __str__(self):
-        return f'{self.text}'
+        return f'{self.text}, {self.image}'
 
     class Meta:
         verbose_name = 'Физ.лица'

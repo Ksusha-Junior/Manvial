@@ -4,37 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bbc2206-118e-4c99-8bcd-9c79d873b814" name="Changes" comment="post+personalinfo+pricelist">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comments/Comment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comments/CommentButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comments/CommentForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comments/Comments.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Comments/CommentsList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/Organozations.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/InstagramLink/InstagramLink.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Message/Message.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Message/Message.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TelegramLink/TelegramLink.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ViberLink/ViberLink.jsx" afterDir="false" />
+    <list default="true" id="5bbc2206-118e-4c99-8bcd-9c79d873b814" name="Changes" comment="+отзывы + соцсети">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/Organizations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/People.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/People.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/general/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/general/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/general/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/For_you/Organozations.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/For_you/Organizations.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PersonalInfo/PersonalInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PersonalInfo/PersonalInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/post/Post.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/post/Post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/price/Price.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/price/Price.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/price/PriceList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/price/PriceList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766225662246</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="+отзывы + соцсети">
+      <option name="closed" value="true" />
+      <created>1767427421836</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767427421836</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -194,6 +184,7 @@
     <MESSAGE value="готово" />
     <MESSAGE value="post" />
     <MESSAGE value="post+personalinfo+pricelist" />
-    <option name="LAST_COMMIT_MESSAGE" value="post+personalinfo+pricelist" />
+    <MESSAGE value="+отзывы + соцсети" />
+    <option name="LAST_COMMIT_MESSAGE" value="+отзывы + соцсети" />
   </component>
 </project>

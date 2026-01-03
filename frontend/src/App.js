@@ -5,6 +5,8 @@ import HomePage from './components/HomePage/HomePage';
 import PriceList from './components/price/PriceList';
 import Message from './components/Message/Message';
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
+import Organizations from './components/For_you/Organizations';
+import People from './components/For_you/People';
 import InstagramLink from './components/InstagramLink/InstagramLink';
 import TelegramLink from './components/TelegramLink/TelegramLink';
 import ViberLink from './components/ViberLink/ViberLink';
@@ -28,7 +30,8 @@ function App() {
                     <div className="left-column">
                     {/*<h2 className='header-text'>Качественно! Недорого! В удобное для Вас время!</h2>*/}
                         <PersonalInfo />
-
+                        <Organizations/>
+                        <People/>
                     </div>
                     <div className="center-column">
                         <Routes>
