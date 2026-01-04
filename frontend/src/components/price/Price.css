@@ -12,9 +12,13 @@
 
 .PriceList-title {
     text-align: center;
-    margin: 5px 10px 30px 10px;
+    margin: 5px 10px 10px 10px;
     font-weight: bold;         /* жирный */
     font-size: 1.7em;
+}
+.PriceList-title-comment{
+    text-align: center;
+    margin: 5px 10px 25px 10px;
 }
 
 .PriceList-columns {
@@ -50,4 +54,7 @@
 
 .price-item {
     padding: 5px 0;
+}
+.PriceList-end {
+    text-align: center;
 }

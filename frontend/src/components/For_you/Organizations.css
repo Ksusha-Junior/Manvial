@@ -8,6 +8,7 @@
     width: 100%;
     background-color: #bddbd2;
     cursor: pointer;
+    margin-top: 10px;
 }
 .orgbutton:hover {
     background-color: #5c7a71; /* Цвет фона при наведении */

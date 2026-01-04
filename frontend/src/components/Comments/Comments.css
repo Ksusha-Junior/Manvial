@@ -1,6 +1,4 @@
 .comments-container {
-    /*background-color: #e1edea;*/
-   /*background-image: url('../../images/девушка.jpg');*/
    display: flex;
    flex-direction: column;
    height: 100%;

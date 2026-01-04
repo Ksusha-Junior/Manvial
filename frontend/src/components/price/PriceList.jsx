@@ -23,12 +23,11 @@ function PriceList() {
 
   return (
     <div className='PriceList-main'>
-      {/* Заголовок по центру, крупный и жирный */}
       <h2 className='PriceList-title'>Услуги и цены</h2>
+      <h3 className='PriceList-title-comment'>Цены ориентировочные и зависят от размера изделия ПВХ!</h3>
 
-      {/* Контейнер для двух колонок */}
       <div className='PriceList-columns'>
-        {/* Колонка с услугами */}
+
         <div className='column services-column'>
           {prices.map((item) => (
             <div key={item.id} className='service-item'>
@@ -46,6 +45,7 @@ function PriceList() {
           ))}
         </div>
       </div>
+      <h2 className='PriceList-end'>и многое другое!</h2>
     </div>
   );
 }

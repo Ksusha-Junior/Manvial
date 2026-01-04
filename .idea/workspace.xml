@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bbc2206-118e-4c99-8bcd-9c79d873b814" name="Changes" comment="+отзывы + соцсети">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/Organizations.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/People.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/For_you/People.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/general/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/general/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/general/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/For_you/Organozations.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/For_you/Organizations.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Comments/Comments.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Comments/Comments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/For_you/Organizations.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/For_you/Organizations.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PersonalInfo/PersonalInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PersonalInfo/PersonalInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/price/Price.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/price/Price.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/price/PriceList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/price/PriceList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

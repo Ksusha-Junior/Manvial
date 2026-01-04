@@ -36,7 +36,7 @@
   padding-top: 10px;
   padding-left: 5px;
   margin-right: 5px;
-  gap: 15px;  /*расстояние между елементами родительского конейнера*/
+  gap: 20px;  /*расстояние между елементами родительского конейнера*/
 }
 
 .center-column {
@@ -82,4 +82,125 @@
 .scrolling-text {
   display: inline-block; /* Устанавливает блочный, чтобы применять анимацию */
   animation: scrollLeft 17s linear infinite; /* Время прохождения и бесконечное повторение */
+}
+
+/* Стиль для кнопки-ссылки */
+.telegram-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #0088cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.telegram-button:hover {
+  background-color: #006fae;
+  transform: scale(1.05);
+  color: black;
+}
+
+/* Стиль для иконки */
+.telegram-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.container {
+  perspective: 1000px; /* глубина 3D */
+  display: inline-block;
+}
+
+/*@keyframes rotate3D {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  5% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  45% {
+    transform: rotateY(180deg); /* Поворачиваем, чтобы левая часть ушла влево, правая — вправо */
+  /*}
+  55% {
+    transform: rotateY(180deg); /* Задержка в положении */
+  /*}
+  95% {
+    transform: rotateY(360deg); /* Возвращаем к нормальному положению */
+  /*}
+  100% {
+    opacity: 0;
+    transform: rotateY(360deg);
+  }
+}*/
+
+/*@keyframes fullRotate {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}*/
+
+/* Анимация текста */
+@keyframes pulseRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotateY(0deg);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+
+  /* Задержка после увеличения: оставаться с opacity 1 */
+  12% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+  30% {
+    opacity: 1;
+    /* задержка без изменений */
+  }
+
+  /* Вращение */
+  30% {
+    transform: scale(1) rotateY(0deg);
+  }
+  50% {
+    transform: scale(1) rotateY(360deg);
+  }
+
+  /* После вращения — задержка, остаемся с opacity 1 */
+  70% {
+    opacity: 1;
+    transform: scale(1) rotateY(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) rotateY(360deg);
+  }
+}
+
+/* Для анимационного текста */
+.animated-text {
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 17px;
+  text-align: center;
+  color: #9e0e0e;
+  font-weight: bold;
+  transform-style: preserve-3d; /* Чтобы сохранился 3D эффект */
+  animation: pulseRotate 25s linear infinite;
+  /*animation: rotate3D 5s infinite;*/
+  /*backface-visibility: hidden; /* Чтобы задняя сторона не показывалась */
 }

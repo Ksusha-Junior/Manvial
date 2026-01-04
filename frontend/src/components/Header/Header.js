@@ -19,6 +19,7 @@ function Header() {
                         <li><Link to="/prices">Услуги и цены</Link></li>
                         <li><Link to="/message">Это важно!</Link></li>
                         <li><Link to="/comments">Отзывы</Link></li>
+                        <li><Link to="/interesting">Это интересно!</Link></li>
 
                     </ul>
                 </nav>

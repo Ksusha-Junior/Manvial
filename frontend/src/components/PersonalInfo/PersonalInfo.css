@@ -2,8 +2,8 @@
     background-color: #faf2f2;
     display: flex;
     flex-direction: column;
-    margin-top: 5px; /* Опускание текста вниз от верхнего края*/
-    padding: 20px; /* Отступы */
+    /*margin-top: 5px; /* Опускание текста вниз от верхнего края*/
+    padding: 10px; /* Отступы */
     gap: 10px;  /*отступ между элементами внутри контейнера*/
     justify-content: center;
     width: 100%; /* растягиваем по всей ширине */

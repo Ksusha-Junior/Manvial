@@ -15,6 +15,7 @@ import CommentsList from './components/Comments/CommentsList';
 import CommentButton from './components/Comments/CommentButton';
 import './App.css';
 import Footer from './components/Footer/Footer';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 function App() {
     return (
@@ -46,6 +47,20 @@ function App() {
                         <TelegramLink />
                         <ViberLink />
                         <CommentButton />
+                        <p>
+                    <a
+                        href="https://t.me/Remontokontut_bot"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="telegram-button"
+                    >
+                      <FaTelegramPlane className="telegram-icon" />
+                      <span>Наш Telegram-бот для самостоятельного расчета стоимости ремонта</span>
+                    </a>
+                    <p className="animated-text">
+                      Своевременное обслуживание - залог спокойствия!
+                    </p>
+                </p>
                     </div>
                 </main>
                 <Footer />
