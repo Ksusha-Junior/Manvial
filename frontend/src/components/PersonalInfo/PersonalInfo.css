@@ -1,5 +1,5 @@
 .personalinfo-container {
-    background-color: #faf2f2;
+    /*background-color: #faf2f2;*/
     display: flex;
     flex-direction: column;
     /*margin-top: 5px; /* Опускание текста вниз от верхнего края*/
@@ -25,4 +25,17 @@
     font-weight: bold;         /* жирный */
     font-size: 14px;
     text-align: justify; /* Выравнивание текста по обоим краям */
+    /*font-style: oblique;  /*шрифт курсив*/
+}
+
+/* Медиазапрос для экранов шириной <= 768px */
+@media (max-width: 768px) {
+    .personalinfo-container{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        padding:10px;
+    }
+
 }

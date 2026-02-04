@@ -30,37 +30,41 @@ const Comment = (props) => {
         {/* Миниатюры изображений */}
         {comment.photos && comment.photos.length > 0 && (
           <div className='images-container'>
-            {comment.photos.map((img, index) => (
-              <img
-                key={index}
-                src={img.file}
-                alt="Comment media"
-                className='thumb-img'
-                onClick={() => openModal({ type: 'image', src: img.file })}
-              />
-            ))}
+              {comment.photos.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.file}
+                  alt="Comment media"
+                  className='thumb-img'
+                  onClick={() => openModal({ type: 'image', src: img.file })}
+                />
+              ))}
           </div>
         )}
 
         {/* Видео */}
-        {comment.video_url && (
-          <video
-            src={comment.video_url}
-            className='thumb-video'
-            controls
-            onClick={() => openModal({ type: 'video', src: comment.video_url })}
-          />
+        {comment.videos && comment.videos.length > 0 && (
+          <div className='video-container'>
+              {comment.videos.map((video, index) => (
+                <video
+                  key={index}
+                  src={video.file}
+                  className='thumb-video'
+
+                  onClick={() => openModal({ type: 'video', src: video.file })}
+                />
+              ))}
+          </div>
         )}
       </div>
-
       {/* Модальное окно для увеличенной картинки / видео */}
       {modalMedia && (
         <div className='modal' onClick={closeModal}>
           {modalMedia.type === 'image' ? (
             <img src={modalMedia.src} alt="Full size" className='modal-content' />
-          ) : (
+          ) : modalMedia.type === 'video' ? (
             <video src={modalMedia.src} controls autoPlay className='modal-content' />
-          )}
+          ): null}
         </div>
       )}
     </div>
@@ -77,8 +81,11 @@ Comment.propTypes = {
         file: PropTypes.string.isRequired,
       })
     ),
-    video_url: PropTypes.string,
+    videos: PropTypes.arrayOf(
+      PropTypes.shape({
+        file: PropTypes.string.isRequired,
+      })
+    ),
   }).isRequired,
 };
-
 export default Comment;

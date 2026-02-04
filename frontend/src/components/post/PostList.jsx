@@ -30,7 +30,7 @@ function PostList() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true  /*true-если используем встроенные стрелки, false - сли свои*/
+        arrows: false  /*true-если используем встроенные стрелки, false - сли свои*/
     };
 
     return (

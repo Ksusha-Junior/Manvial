@@ -16,7 +16,7 @@ function ViberLink() {
         border: '2px solid #ccc',
         borderRadius: '8px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
-        backgroundColor: '#e1edea',
+        backgroundColor: '#9f9fa1',
         }}
     >
       <FaViber size={24} color="#665CAC" />

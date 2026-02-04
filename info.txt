@@ -39,3 +39,7 @@ New-Item -ItemType Directory -Path ./frontend/static, ./frontend/templates, ./fr
 -npm install react-slick установка библиотеки для слайдера
 - npm install slick-carousel библиотека для карусели
 - npm install react-icons библиотека для значков популярных соц.сетей
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> - тег для адаптивности вставляется в index.html
+
+python manage.py shell   команда для проверки кода

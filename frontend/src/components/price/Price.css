@@ -36,7 +36,7 @@
 }
 
 .column.prices-column {
-    flex: 0.5;
+    flex: 0.7;
     min-width: 0;
 }
 .service-item {
@@ -45,16 +45,35 @@
     white-space: nowrap; /* чтобы не переносился текст */
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 0.3s ease;
 }
-.service-item:hover {
+
+.service-item.expanded {
+  white-space: normal; /* показывать весь текст */
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+/*.service-item:hover {
     white-space: normal; /* показывать полный текст при наведении */
-    background-color: rgba(0, 0, 0, 0.05); /* по желанию — легкая подсветка */
-    z-index: 1; /* чтобы не обрезался, можно добавить если есть позиционирование */
-}
+    /*background-color: rgba(0, 0, 0, 0.05); /* по желанию — легкая подсветка */
+    /*z-index: 1; /* чтобы не обрезался, можно добавить если есть позиционирование */
+/*}*/
 
 .price-item {
     padding: 5px 0;
 }
 .PriceList-end {
     text-align: center;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .column.services-column {
+        flex: 2;
+        min-width: 0;
+}
+    .column.prices-column {
+        flex: 1;
+        min-width: 0;
+    }
 }

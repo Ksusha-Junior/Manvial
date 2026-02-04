@@ -8,6 +8,7 @@ const API_URL_PRICE = 'http://127.0.0.1:8000/price/';
 
 function PriceList() {
   const [prices, setPrices] = useState([]);
+  const [expandedIds, setExpandedIds] = useState([]); // список открытых строк
 
   useEffect(() => {
     async function fetchPrices() {
@@ -20,6 +21,11 @@ function PriceList() {
     }
     fetchPrices();
   }, []);
+  const toggleExpand = (id) => {
+    setExpandedIds(prev =>
+      prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
+    );
+  };
 
   return (
     <div className='PriceList-main'>
@@ -30,7 +36,11 @@ function PriceList() {
 
         <div className='column services-column'>
           {prices.map((item) => (
-            <div key={item.id} className='service-item'>
+            <div
+              key={item.id}
+              className={`service-item ${expandedIds.includes(item.id) ? 'expanded' : ''}`}
+              onClick={() => toggleExpand(item.id)}
+            >
               {item.service_name}
             </div>
           ))}

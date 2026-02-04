@@ -1,19 +1,11 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from rest_framework.views import APIView
-from rest_framework import status
-from rest_framework.response import Response
-from django.utils import timezone
-from .serializers import PersonalinfoSerializer
+from .serializers import PersonalinfoSerializer, InterestingSerializer
 from .serializers import PostSerializer
 from .serializers import CommentSerializer
 from .serializers import OrganizationsSerializer
 from .serializers import PeopleSerializer
-from .models import Personal_info
-from .models import Post
-from .models import Comment
-from .models import Organizations
-from .models import People
+from .models import Personal_info, Interesting, Post, Comment, Organizations, People
+
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
@@ -44,3 +36,8 @@ class OrganizationsViewSet(viewsets.ReadOnlyModelViewSet):
 class PeopleViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = People.objects.all()
     serializer_class = PeopleSerializer
+
+class InterestingViewSet(viewsets.ModelViewSet):
+    queryset = Interesting.objects.all()
+    serializer_class = InterestingSerializer
+    http_method_names = ['get']

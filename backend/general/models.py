@@ -94,3 +94,15 @@ class People(models.Model):
     class Meta:
         verbose_name = 'Физ.лица'
         verbose_name_plural = 'Физ.лица'
+
+class Interesting(models.Model):
+    title = models.CharField(verbose_name='заголовок', blank=True )
+    image = models.ImageField(verbose_name='Картинка', upload_to='images', null=True, blank=True)
+    text = models.TextField(verbose_name='Текст')
+
+    def __str__(self):
+        return self.text
+
+    class Meta:
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'

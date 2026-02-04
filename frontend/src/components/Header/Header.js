@@ -10,7 +10,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header-main">
-                <h1 className="header-title">Manvial</h1>
+                <h1 className="header-title">Манвиал</h1>
                 <h2 className='header-text'>Качественно! Недорого! В удобное для Вас время!</h2>
 
                 <nav className="header-nav">
@@ -65,10 +65,12 @@ function Header() {
                 </p>
             </div>
             <div className="work-time">
-                <h2>Пн-Вс</h2>
-                <h1>9.00-20.00</h1>
-                <h1>+375 29 312 29 94</h1>
-                <h1>+375 29 743 10 61</h1>
+                <p>
+                    <h2>Пн-Вс</h2>
+                    <h2>9.00-20.00</h2>
+                    <h1>+375 29 312 29 94</h1>
+                    <h1>+375 29 743 10 61</h1>
+                </p>
             </div>
 
         </header>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/comment/';
+const API_URL = 'http://127.0.0.1:8000/comments/';
 
 const CommentForm = ({ onClose, onCommentAdded }) => {
   const [name, setName] = useState('');
@@ -29,12 +29,14 @@ const CommentForm = ({ onClose, onCommentAdded }) => {
     formData.append('text', text);
     formData.append('date', new Date().toISOString().split('T')[0]);
 
+
+
     // Загружаемые файлы
     files.forEach((file) => {
     if (file.type.startsWith('image/')) {
       formData.append('images', file); // изображения
     } else if (file.type.startsWith('video/')) {
-      formData.append('video', file); // видео
+      formData.append('videos_upload', file); // видео
     }
   });
 
@@ -130,3 +132,4 @@ CommentForm.propTypes = {
 };
 
 export default CommentForm;
+

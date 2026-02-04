@@ -6,8 +6,10 @@ const Post = ({post}) => {
     return(
         <div className='post'>
             <h2 className='post-title'>{post.title}</h2>
+
             <img src={post.image}  className="post-image" alt='Post Image' />
             <p className='post-text'>{post.text}</p>
+
         </div>
     );
 };

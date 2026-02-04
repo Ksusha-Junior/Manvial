@@ -13,11 +13,27 @@ import ViberLink from './components/ViberLink/ViberLink';
 import CommentForm from './components/Comments/CommentForm';
 import CommentsList from './components/Comments/CommentsList';
 import CommentButton from './components/Comments/CommentButton';
+import InterestingList from './components/Interesting/InterestingList';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 function App() {
+    const [isMobile, setIsMobile] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        // функция для определения мобильной ширины
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize(); // при первой загрузке
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const openModal = () => setShowModal(true);
+    const closeModal = () => setShowModal(false);
     return (
         <Router>
             <div className="app">
@@ -29,8 +45,12 @@ function App() {
                 </div>
                 <main className='main-content'>
                     <div className="left-column">
-                    {/*<h2 className='header-text'>Качественно! Недорого! В удобное для Вас время!</h2>*/}
-                        <PersonalInfo />
+                        {isMobile ? (
+                            // если мобильное — показываем кнопку
+                            <button className='PersonalInfobutton' onClick={openModal}>О нас</button>
+                        ) : (
+                            <PersonalInfo />
+                            )}
                         <Organizations/>
                         <People/>
                     </div>
@@ -40,6 +60,7 @@ function App() {
                             <Route path="/prices" element={<PriceList />} />
                             <Route path="/message" element={<Message />} />
                             <Route path="/comments" element={<CommentsList />} />
+                            <Route path="/interesting" element={<InterestingList />} />
                         </Routes>
                     </div>
                     <div className="right-column">
@@ -63,6 +84,15 @@ function App() {
                 </p>
                     </div>
                 </main>
+                {/* Модальное окно */}
+                {showModal && (
+                    <div className="modal" onClick={closeModal}>
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+
+                            <PersonalInfo />
+                        </div>
+                    </div>
+                )}
                 <Footer />
             </div>
         </Router>

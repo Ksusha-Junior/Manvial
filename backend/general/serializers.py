@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Personal_info
-from .models import Post
+from .models import Post, Interesting
 from .models import Comment
 from .models import Photo, Video
 from .models import Organizations, People
@@ -25,13 +25,13 @@ class CommentSerializer(serializers.ModelSerializer):
     images = serializers.ListField(
         child=serializers.ImageField(), write_only=True, required=False
     )
-    videos_files = serializers.ListField(
+    videos_upload = serializers.ListField(
         child=serializers.FileField(), write_only=True, required=False
     )
 
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ['id', 'date', 'name', 'text', 'photos', 'videos', 'images', 'videos_upload']
 
     def get_photos(self, obj):
         request = self.context.get('request')
@@ -39,6 +39,8 @@ class CommentSerializer(serializers.ModelSerializer):
             {'file': request.build_absolute_uri(photo.image.url)}
             for photo in obj.photos.all()
         ]
+        print(f'get_photos for Comment ID {obj.id}: {photos_list}')
+        return photos_list
 
     def get_videos(self, obj):
         request = self.context.get('request')
@@ -46,10 +48,12 @@ class CommentSerializer(serializers.ModelSerializer):
             {'file': request.build_absolute_uri(video.video.url)}
             for video in obj.videos.all()
         ]
+        print(f'get_videos for Comment ID {obj.id}: {videos_list}')
+        return videos_list
 
     def create(self, validated_data):
         images = validated_data.pop('images', [])
-        videos_files = validated_data.pop('videos_files', [])
+        videos_upload = validated_data.pop('videos_upload', [])
         comment = Comment.objects.create(**validated_data)
 
         # Создаем фото
@@ -57,8 +61,11 @@ class CommentSerializer(serializers.ModelSerializer):
             Photo.objects.create(comment=comment, image=image)
 
         # Создаем видео
-        for video in videos_files:
+        for video in videos_upload:
             Video.objects.create(comment=comment, video=video)
+        print(f'Создан комментарий ID {comment.id}')
+        print(f'Связанные фото: {[photo.id for photo in comment.photos.all()]}')
+        print(f'Связанные видео: {[video.id for video in comment.videos.all()]}')
 
         return comment
 
@@ -80,3 +87,7 @@ class PeopleSerializer(serializers.ModelSerializer):
         model = People
         fields = ['text', 'image']
 
+class InterestingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Interesting
+        fields = ['title','image', 'text']

@@ -6,7 +6,7 @@
     color: inherit;
     width: 100%;
     padding: 5px;
-    background-color: #bddbd2;
+    background-color: #9f9fa1;/*#bddbd2;*/
     cursor: pointer;
 }
 .people-button:hover {

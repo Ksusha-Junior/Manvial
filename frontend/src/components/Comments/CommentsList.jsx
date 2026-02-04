@@ -3,7 +3,7 @@ import Comment from './Comment';
 import axios from 'axios';
 import './Comments.css';
 
-const API_URL = 'http://127.0.0.1:8000/comment/';
+const API_URL = 'http://127.0.0.1:8000/comments/';
 
 function CommentsList() {
     const [comments, setComments] = useState([]);

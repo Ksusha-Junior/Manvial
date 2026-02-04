@@ -1,49 +1,61 @@
-.comments-container {
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-   overflow: auto; /*Добавляет полосу прокрутки если все не влазит*/
-}
-.comments-container h2 {
-    text-align: center;
-    margin: 5px 10px 10px 10px;
-    font-weight: bold;         /* жирный */
-    color: black;
-    font-size: 40px;
-}
-
-.comments-list {
-    /*background-color: black;*/
-    list-style-type: none;   /*убрать маркеры списка*/
-    margin-top: 10px;
-    display: flex;
+.comment {
+    background-color: #FFFFFF;
+    /*margin-top: 10px; /* Опускание текста вниз от верхнего края*/
     flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    vertical-align: top;
-    text-align: center;
+    padding: 10px; /* Отступы */
+    margin-left: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); /* Тень для блока */
+    text-align: left; /* Выравнивание текста по лево */
+    width: 90%;
+    height: auto;
 }
 
-.commentbutton {
-    border: 2px solid #ccc;
-      border-Radius: 8px;
-      box-Shadow: 0 4px 8px rgba(0, 0, 0, 1);
-      text-Decoration: none;
-      color: inherit;
-      padding: 10px;
-      background-color: #bddbd2;
-    cursor: pointer;
-}
-.commentbutton:hover {
-    background-color: #5c7a71; /* Цвет фона при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
-    color: white;
+.comment-info {
+    display: flex;
+    justify-content: space-between;  /*элементы один слева с края другой справа*/}
 
+.comment-name {
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+}
+.comment-date {
+    font-size: 10px;
+    color: black;
+}
+
+.comment-text {
+    font-size: 15px;
+    color: black;
+}
+
+.comment-media {
+    display: flex;
+    /*flex-direction: column;*/
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.thumb-img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.thumb-video {
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .modal {
-    position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -55,19 +67,70 @@
   z-index: 9999;
 }
 
-.modal-content {
+/*.modal-content {
     background-color: #fff;
   padding: 30px;
   border-radius: 8px;
-  width: 600px;
   max-width: 90%;
   max-height: 90%;
-  overflow-y: auto; /* прокрутка если контент длинный */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-family: Arial, sans-serif;
+  object-fit: contain;
+  cursor: auto; /* чтобы курсор не показывал, что можно кликать в модале */
+/*}*/
+
+.comments-container {
+   display: flex;
+   flex-direction: column;
+   height: 80vh;
+   width: 100%;
+   padding: 10px;
+   box-sizing: border-box; /* чтобы padding не мешал */
+   /*border: 1px solid #ccc; /* для визуализации, по желанию */
+}
+
+.comments-container h2 {
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    font-weight: bold;         /* жирный */
+    color: black;
+    font-size: 30px;
+    flex: 0 0 auto; /* чтобы не растягивался */
+}
+
+.comments-list {
+    flex: 1;  /* занимает всю оставшуюся высоту контейнера */
+    overflow-y: auto; /*Добавляет полосу прокрутки если все не влазит*/
+    /*list-style-type: none;   /*убрать маркеры списка*/
+    margin-top: 10px;
+    gap: 7px;
+    display: flex;
+    flex-direction: column;
+    /*background-position: center;
+    background-repeat: no-repeat;
+    height: auto%;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;*/
+}
+
+.commentbutton {
+    border: 2px solid #ccc;
+      border-Radius: 8px;
+      box-Shadow: 0 4px 8px rgba(0, 0, 0, 1);
+      text-Decoration: none;
+      color: inherit;
+      padding: 10px;
+      background-color: #9f9fa1;
+      cursor: pointer;
+}
+.commentbutton:hover {
+    background-color: #5c7a71; /* Цвет фона при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    color: white;
+
 }
 
 input[type="text"],
@@ -120,95 +183,7 @@ button {
   border-radius: 4px;
   margin-right: 10px;
 }
-.comment {
-    background-color: #FFFFFF;
-    margin-top: 10px; /* Опускание текста вниз от верхнего края*/
-    flex-direction: column;
-    padding: 10px; /* Отступы */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); /* Тень для блока */
-    padding: 10px; /* Отступы */
-    text-align: left; /* Выравнивание текста по лево */
-    width: 700px;
-    height: auto;
-    overflow: auto; /*Добавляет полосу прокрутки если все не влазит*/
 
-}
-
-.comment-info {
-    display: flex;
-    justify-content: space-between;  /*элементы один слева с края другой справа*/}
-
-.comment-date {
-    font-size: 10px;
-    color: black;
-}
-
-.comment-name {
-    font-size: 13px;
-    color: black;
-}
-
-.comment-text {
-    font-size: 15px;
-    color: black;
-}
-
-.thumb-img {
-  width: 70px;
-  height: 50px;
-  object-fit: cover;
-  margin-right: 8px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.thumb-video {
-  width: 70px;
-  height: 50px;
-  margin-top: 8px;
-  cursor: pointer;
-  object-fit: cover;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  cursor: auto; /* чтобы курсор не показывал, что можно кликать в модале */
-}
-
-/*.comment-media {
-    /*display: flex;*/
-
-    /*border-radius: 15px;
-    object-fit: cover;
-}
-
-.images-container {
-    display: flex;
-    width: 30px; /* Ширина изображения */
-    /*height: 50px; /*  высота */
-
-/*}
-
-.images-container:hover {
-
-}*/
 
 .comment-form {
     /*background-image: url(./images/photo_2025-03-29_18-38-30.jpg);*/
@@ -267,7 +242,6 @@ button {
     cursor: pointer; /* Указываем на возможность клика */
     transition: background-color 0.3s, box-shadow 0.3s; /* Плавный переход */
 }
-
 
 .thank-you-message {
     display: flex;
